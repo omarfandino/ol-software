@@ -1,0 +1,7 @@
+{
+  "name": "ol-soft",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
