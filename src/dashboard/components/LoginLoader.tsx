@@ -58,11 +58,11 @@ export const LoginLoader = () => {
               },
             },
 
-            '& > div:nth-child(2)': {
+            '& > div:nth-of-type(2)': {
               animationDelay: `${LOADER_TIME_SEC * 0.33}s`,
             },
 
-            '& > div:nth-child(3)': {
+            '& > div:nth-of-type(3)': {
               animationDelay: `${LOADER_TIME_SEC * 0.66}s`,
             },
           }}

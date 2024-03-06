@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import {
   Box,
   Button,
@@ -12,9 +12,22 @@ import {
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { LoginLoader } from '../dashboard/components/LoginLoader';
+import { AuthContext } from './context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 export const LoginPage = () => {
-  const [isLoading] = useState(false);
+  const navigate = useNavigate();
+  const { login } = useContext(AuthContext);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const onLogin = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      login();
+      navigate('/');
+    }, 2000);
+  };
 
   return (
     <>
@@ -171,6 +184,7 @@ export const LoginPage = () => {
                   textTransform: 'capitalize',
                   fontWeight: 'normal',
                 }}
+                onClick={() => onLogin()}
               >
                 Iniciar Sesion
               </Button>

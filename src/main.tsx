@@ -4,12 +4,12 @@ import { createTheme } from '@mui/material';
 import CssBaseline from '@mui/material/CssBaseline';
 import { BrowserRouter } from 'react-router-dom';
 
-import App from './App.tsx';
-
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+
+import App from './App.tsx';
 import { ThemeProvider } from '@emotion/react';
 
 const theme = createTheme({
@@ -20,6 +20,10 @@ const theme = createTheme({
     },
     secondary: {
       main: '#f50057',
+    },
+    success: {
+      main: '#8EC54A',
+      contrastText: '#FFFFFF',
     },
   },
   typography: {
