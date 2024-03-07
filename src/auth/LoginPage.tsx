@@ -73,7 +73,7 @@ export const LoginPage = () => {
             },
           }}
         >
-          <img src="public/background.jpg" />
+          <img src="/background.jpg" />
         </Box>
         <Box
           sx={{
